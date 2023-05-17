@@ -1,0 +1,23 @@
+# Docker compose version currently used
+version: "3.8"
+
+# Services section defines all the different containers we will create
+services:
+  app:
+    container_name: react-docker
+    image: react-docker
+
+    # This keyword specifies the location of our Dockerfile
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    # Help us sync our host and container volumes { link of the container with extisting app } .
+    # This way, we won’t have to rebuild the images if changes are made.
+    volumes:
+      - ./:/app
+      - /app/node_modules
+
+    # Ports keyword is used to map the container’s ports to the host machine
+    ports:
+      - 3000:3000
