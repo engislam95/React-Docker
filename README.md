@@ -55,5 +55,5 @@ Steps :
 
 -- You can find many commands on the official documentation : https://docs.docker.com/engine/reference/commandline/docker/ .
 
-Thanks
+Thanks, 
 Islam Baidaq
